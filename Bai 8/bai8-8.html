@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <td>Amount</td>
+        <td></td>
+        <td>From Currency</td>
+        <td></td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="money"></td>
+        <td></td>
+        <td>
+            <select id="select1">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <select id="select2">
+                <option id="USD">USD</option>
+                <option id="VND">VND</option>
+            </select>
+        </td>
+        <td>
+            <input type="submit" style="background-color: cornflowerblue" value="Convert" id="convect" onclick="add()">
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function add(){
+
+        let amountMoney = +document.getElementById('money').value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        let result = 0;
+        if (select1 === 'VND' && select2 === 'USD') {
+            result = amountMoney / 23000;
+        }
+        if (select1 === 'USD' && select2 === 'VND') {
+            result = amountMoney * 23000;
+        }
+        if (select1 === 'VNĐ' && select2 === 'VNĐ') {
+            result = amountMoney
+        }
+        if (select1 === 'USD' && select2 === 'USD') {
+            result = amountMoney
+        }
+        document.getElementById('result').innerHTML = result + '';
+    }
+</script>
+</body>
+</html>

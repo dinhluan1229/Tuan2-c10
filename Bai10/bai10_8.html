@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><strong>Do You Love Me?</strong></h1>
+<br>
+<button onclick="yesClick()">YES</button>
+<button id="2" style="position: absolute" onmouseover="noClick()">NO</button>
+<p id="1"></p>
+<script>
+  function yesClick(){
+    document.getElementById('1').innerHTML="But I do not love you"
+  }
+  function noClick(){
+    let a = Math.round(Math.random()* window.innerWidth);
+    let b = Math.round(Math.random()* window.innerHeight);
+    document.getElementById('2').style.left = a + 'px';
+    document.getElementById('2').style.top = b + 'px';
+  }
+</script>
+</body>
+</html>
