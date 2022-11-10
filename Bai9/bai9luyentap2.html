@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // Bài 1: Chuyển từ độ C sang độ F.
+
+      // let a= +prompt('Nhập độ C');
+     // alert('Độ F là:' + (a*9/5-32))
+
+   //Bài 2: Chuyển từ mét sang feet:
+
+   // let a= +prompt('Nhập độ dài(m) ');
+   // alert('Số feet là: ' + a*3.2808)
+
+  //Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+
+   // let a= +prompt('Nhập cạnh a');
+   // alert('Diện tích hình vuông là: ' + a*a);
+
+   //Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+
+   // let a= +prompt('Nhập cạnh a');
+   // let b= +prompt('Nhập cạnh b');
+   // alert('Diện tích hình chữ nhật là: ' + a*b)
+
+   //Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+
+   // let a= +prompt('Nhập cạnh a');
+   // let b= +prompt('Nhập cạnh b');
+   // alert('Diện tích tam giác vuông là: ' + a*b/2)
+
+   //Bài 6: Giải phương trình bậc 1.
+   //
+   // let a = +prompt('Nhập a');
+   // let b = +prompt('Nhập b');
+   // alert('phương trình có nghiệm x =' + (-b/a));
+
+   //Bài 7: Giải phương trình bậc 2
+
+   // let a=+prompt('Nhập giá trị a');
+   // let b=+prompt('Nhập giá trị b');
+   // let c=+prompt('Nhập giá trị c');
+   // let delta=(b*b)-(4*a*c);
+   // if (delta<0){
+   //   alert('Phương trình vô nghiệm')
+   // }
+   // else
+   // if (delta===0){
+   //   alert('Phương trình có nghiệm kép x1 = x2 =' + (-b/(2*a)))
+   // } else
+   //   alert('Phương trình có nghiệm'+ 'x1 ='+ (-b-Math.sqrt(delta))/(2*a)+ ';' +'x2 =' +(-b+Math.sqrt(delta))/(2*a))
+
+   //Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+
+      // let a= parseInt(prompt('Nhập số tuổi'));
+      // if (a>0 && a<120){
+      //   alert('Là người')
+      // }else alert('Không là người')
+
+    //Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+
+      // let a= +prompt('Nhập  cạnh a');
+      // let b= +prompt('Nhập  cạnh b');
+      // let c= +prompt('Nhập  cạnh c');
+      // a, b, c > 0;
+      // if (a+b>c && a+c>b && b+c>a){
+      //   alert('a,b,c là 3 cạnh của tam giác')
+      // }
+      // else alert('a,b,c không là 3 cạnh cua tam giác')
+
+   //Bài 10: Viết chương trình tính giá điện.
+
+   // let a= +prompt('Nhập số điện');
+   // if (a<=50){
+   //   alert('Giá điện là: ' + a*1.484)
+   // }else if (a<=100){
+   //   alert('Giá điện là: ' + a*1.533)
+   // }else if (a<=200){
+   //   alert('Giá điện là: '+ a*1786)
+   // }else alert('Giá điện là: ' + a*2.242)
+
+   //Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+
+   // let a= +prompt('Nhập số tiền thu nhập');
+   // if (a<=5000000){
+   //   alert('Số tiền đóng thuế là: ' + a*5/100)
+   // }else if (a<=10000000){
+   //   alert('Số tiền đóng thuế là: ' + a*10/100)
+   // }else if (a<=180000){
+   //   alert('Số tiền đóng thuế là: '+ a*15/100)
+   // }else if (a<=32000000){
+   //   alert('Số tiền đóng thuế là: '+ a*20/100)
+   // }else if (a<=52000000){
+   //   alert('Số tiền đóng thuế là: '+ a*25/100)
+   // }else if (a<=80000000){
+   //   alert('Số tiền đóng thuế là: '+ a*30/100)
+   // }else alert('Số tiền đóng thuế là: ' + a*35/100)
+
+   //Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+
+
+     function add(){
+     let soTien= +(document.getElementById('money').value);
+     let soNam= +(document.getElementById('nam').value);
+     let soLai= +document.getElementById('lai').value;
+     let result= soTien*Math.pow((1+soLai/100),soNam);
+     document.getElementById('result').innerHTML= 'Số tiền là'+ result + 'VND';
+   }
+</script>
+<table>
+  <tr>
+    <td>Số tiền gửi</td>
+    <td></td>
+    <td>Số năm gửi</td>
+    <td></td>
+    <td>Lãi suất</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <input type="number" id="money">
+    </td>
+    <td></td>
+    <td>
+      <input type="number" id="nam">
+    </td>
+    <td></td>
+    <td>
+      <input type="number" id="lai">
+    </td>
+    <td>
+      <input type="submit" value="Convert" id="convect" onClick="add()">
+    </td>
+  </tr>
+  <p id="result"></p>
+</table>
+</body>
+</html>
